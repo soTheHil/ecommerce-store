@@ -13,11 +13,16 @@ import ItemsView from './Components/ItemsView';
 import { loader as itemsLoader } from './Components/ItemsView';
 
 //import ItemInfo from './Components/ItemInfo';
-import ItemInfo from './Components/ItemInfoTest';
+import ItemInfo from './Components/ItemInfo';
 import { loader as itemInfoLoader } from './Components/ItemInfo';
 
 import { Provider } from 'react-redux';
 import store from './store';
+
+import SigninScreen from './Components/SigninScreen';
+import SignupScreen from './Components/SignupScreen';
+import DeliveryScreen from './Components/DeliveryScreen';
+import OrdersScreen from './Components/OrdersScreen';
 
 const router = createBrowserRouter([
   {
@@ -33,6 +38,22 @@ const router = createBrowserRouter([
         element: <ItemInfo />,
         loader: itemInfoLoader,
         path: "items/:itemId"
+      },
+      {
+        element: <SigninScreen />,
+        path: "signin"
+      },
+      {
+        element: <SignupScreen />,
+        path: "signup"
+      },
+      {
+        element: <DeliveryScreen />,
+        path: "delivery"
+      },
+      {
+        element: <OrdersScreen />,
+        path: "orders"
       }
     ]
   }

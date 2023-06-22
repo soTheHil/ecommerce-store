@@ -1,6 +1,32 @@
 * {
   margin: 0px;
 }
+
+main{
+  min-height: 80vh;
+}
+.dropDown {
+  color: black;
+}
+
+.spinner {
+  margin: 10px 0px 0px 0px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.dropdown-link {
+  color: black;
+  text-decoration: none;
+  display: block;
+  padding: 5px 15px;
+}
+
+.dropdown-link:hover {
+  background-color: #d0d0df;
+  cursor: pointer;
+}
 p{
   margin: 0px;
 }
@@ -9,6 +35,14 @@ p{
   padding: 0px 30px;
 }
 
+.nav-link{
+  color: black
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color:black;
+}
 .nav > .link {
   font-size: 35px;
 }
@@ -21,6 +55,21 @@ p{
   width: 100%;
   height: 50px;
 }
+.subtotal {
+  font-size: 23px;
+}
+select {
+  border: none;
+  border-radius: 17px;
+  width:60px;
+  padding: 7px 10px;
+}
+
+.itemSelect {
+  width: 80px;
+  margin: 10px 0px 20px 0px;
+}
+
 .link {
   text-decoration: none;
   color: black;
@@ -148,4 +197,33 @@ img {
 }
 .itemInfo > button:hover {
   background-color: #343333;
+}
+
+.signInContainer {
+  max-width: 600px;
+  width: 100%;
+  padding: 30px;
+}
+
+.delivery {
+  max-width: 600px;
+}
+
+.delivery  h2, h1 {
+  margin:15px 20px;
+}
+
+.checkout-price {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0px;
+}
+
+.checkout-price div{
+  padding: 0px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
 }

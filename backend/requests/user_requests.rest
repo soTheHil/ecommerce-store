@@ -1,0 +1,18 @@
+POST http://localhost:3001/api/users/signin
+Content-Type: application/json
+
+{
+    "email": "meep@gmail.com",
+    "password": "goose"
+}
+###
+POST http://localhost:3001/api/users/signup
+Content-Type: application/json
+
+{
+    "name": "Meep",
+    "email": "meep@gmail.com",
+    "password": "goose"
+}
+###
+GET http://localhost:3001/api/orders/64935bace31f54ca8271460b
