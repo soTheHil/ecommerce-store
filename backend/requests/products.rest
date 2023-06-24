@@ -1,1 +1,12 @@
-GET http://localhost:3001/api/products
+GET http://localhost:3001/api/products/648c58f6ecd63f8db7a8d2c3
+Content-Type: application/json
+
+###
+POST http://localhost:3001/api/reviews/648c58f6ecd63f8db7a8d2c3
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDkxYjBhM2IyNGY1NjNlNjFhOGJiYTciLCJuYW1lIjoibWVlcCIsImVtYWlsIjoibWVlcEBnIiwiaWF0IjoxNjg3NTQzNTYzLCJleHAiOjE2ODc2Mjk5NjN9.-n80Q0-fuO_GdyJ_4xnrNHsyV_11INeZUhbFmXazrfo
+
+{
+    "rating": "3",
+    "comment": "Amaz"
+}

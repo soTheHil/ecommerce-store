@@ -14,6 +14,7 @@ const orderSchema = new mongoose.Schema({
             }
         }
     ],
+    address: String,
     itemsCost: Number,
     deliveryCost: Number,
     totalCost: Number,
@@ -29,6 +30,13 @@ const orderSchema = new mongoose.Schema({
     user: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "User",
+    }
+})
+
+orderSchema.set("toJSON", {
+    transform: (document, returnedObject) => {
+        returnedObject.createdAt = returnedObject.createdAt.toDateString()
+        delete returnedObject.__v
     }
 })
 

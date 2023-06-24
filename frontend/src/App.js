@@ -10,6 +10,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import CartView from './Components/CartView';
 import { useState } from 'react';
 import { userSignOut } from './reducers/cartReducer';
+import {FaShoppingCart} from 'react-icons/fa'
 import './App.css';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
   const signOutHandler = () => {
     dispatch(userSignOut())
     localStorage.removeItem("userInfo")
+    localStorage.removeItem("cartItems")
     window.location.href = '/signin';
   }
   return (
@@ -28,10 +30,12 @@ function App() {
       <ToastContainer limit={3} position='bottom-center' />
       <Navbar>
         <Container className='nav' fluid>
+          
           <Link className='link' to="/">Soop Eats</Link>
           <Navbar.Collapse className="justify-content-end">
-            <Button bg="dark" variant="dark" onClick={() => setShow(true)}>
-              Cart {cartItems.length > 0 &&
+            <Button className="cartBtn" bg="dark" variant="dark" onClick={() => setShow(true)}>
+              <FaShoppingCart fontSize={23} color='white'/>{"  "}
+              {cartItems.length > 0 &&
                 <Badge bg="secondary">
                   {cartItems.reduce((a, c) => {
                     return a += c.quantity
@@ -51,7 +55,7 @@ function App() {
               </NavDropdown>
               )
               : (
-                  <Link className='link mx-3' to="/signin">
+                  <Link className='link mx-3 text-center' to="/signin">
                     Sign In
                   </Link>
               )

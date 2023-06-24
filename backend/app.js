@@ -10,6 +10,7 @@ import Product from "./models/product.js";
 import usersRouter from "./controllers/users.js";
 import productsRouter from "./controllers/products.js";
 import ordersRouter from "./controllers/orders.js";
+import reviewsRouter from "./controllers/reviews.js";
 
 const app = express()
 
@@ -29,6 +30,8 @@ app.use("/api/seed", seedRouter)
 app.use("/api/users", usersRouter)
 app.use("/api/products", productsRouter)
 app.use("/api/orders", ordersRouter)
+app.use("/api/reviews", reviewsRouter)
+
 app.use(middleware.errorHandler)
 app.use(middleware.unknownEndpoint)
 

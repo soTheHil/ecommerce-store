@@ -9,8 +9,11 @@ productsRouter.get("/", async (req, res, next) => {
 })
 
 productsRouter.get("/:id", async (req, res) => {
-    const product = await Product.findById(req.params.id)
-    res.send(product)
+    const product = await Product.findById(req.params.id).populate({
+        path: "reviews",
+        populate: { path: "user"}
+    })
+    res.json(product)
 })
 
 export default productsRouter

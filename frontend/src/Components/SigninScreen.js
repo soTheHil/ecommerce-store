@@ -55,6 +55,7 @@ const SigninScreen = () => {
                     </Form.Label>
                     <Form.Control
                         type="email"
+                        name="email"
                         placeholder="Enter email"
                         required
                         onChange={ ({target}) => setEmail(target.value)}
@@ -65,18 +66,29 @@ const SigninScreen = () => {
                         Password
                     </Form.Label>
                     <Form.Control
+                        name="password"
                         placeholder="Enter password"
                         type="password"
                         required
                         onChange={ ({target}) => setPassword(target.value)}
                     />
                 </Form.Group>
-                <Button  className="mb-3" type="submit" bg="dark" variant="dark">
+                <Button  className="mb-3 w-100" type="submit" bg="dark" variant="dark">
                     Submit
                 </Button>
-                <p>New customer?{" "}
-                    <Link to={`/signup?redirect=${redirect}`}>Create your account</Link>
+                <Container className="d-flex justify-content-center">
+                    <p>New customer?{" "}
+                    <Button
+                        onClick={() => {
+                            navigate(`/signup?redirect=${redirect}`)
+                        }}
+                    >
+                        Create your account
+                    </Button>
+                    {/* <Link to={`/signup?redirect=${redirect}`}>Create your account</Link> */}
                 </p>
+                </Container>
+                
                 
             </Form>
         </Container>

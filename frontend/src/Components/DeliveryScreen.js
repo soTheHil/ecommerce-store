@@ -10,8 +10,11 @@ import { toast } from "react-toastify";
 import { getMessage } from "../utils";
 import BasicSpinner from "./BasicSpinner";
 import { useNavigate } from "react-router-dom"
+import { useDispatch } from "react-redux";
+import { clearCart } from "../reducers/cartReducer";
 
 const DeliveryScreen = () => {
+    const dispatch = useDispatch()
     const navigate = useNavigate()
     const [loading, setLoading] = useState(false)
     const [address, setAddress] = useState('')
@@ -24,7 +27,7 @@ const DeliveryScreen = () => {
    // console.log(cartItems, userInfo, itemsCost, totalCost)
 
     useEffect(() => {
-        if (cartItems.length === 0 || (!userInfo)) {
+        if (!userInfo) {
             navigate("/")
         }
     }, [cartItems, userInfo, navigate])
@@ -49,6 +52,8 @@ const DeliveryScreen = () => {
                     }
                 }
             )
+            dispatch(clearCart())
+            localStorage.removeItem("cartItems")
             setLoading(false)
             navigate("/orders")
             console.log(data)
@@ -123,7 +128,7 @@ const DeliveryScreen = () => {
                     <Col xs="auto">Total Payment</Col>
                     <Col xs="auto">R {totalCost},00</Col>
                 </Row>
-                <Button className="w-100 mt-2" type="submit" variant="dark" bg="dark">
+                <Button disabled={cartItems.length === 0} className="w-100 mt-2" type="submit" variant="dark" bg="dark">
                     Pay
                 </Button>
 

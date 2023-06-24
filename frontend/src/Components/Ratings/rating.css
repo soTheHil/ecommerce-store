@@ -1,0 +1,13 @@
+.ratingForm {
+    border-top: black 3px solid;
+    border-bottom: black 3px solid ;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 5px;
+}
+
+.review{
+    padding:8px 12px;
+    margin: 15px 12px;
+    width: 100%;
+}

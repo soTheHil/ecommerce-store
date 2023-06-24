@@ -9,6 +9,9 @@ main{
   color: black;
 }
 
+.cartBtn{
+  vertical-align: text-bottom;
+}
 .spinner {
   margin: 10px 0px 0px 0px;
   display: flex;
@@ -210,7 +213,7 @@ img {
 }
 
 .delivery  h2, h1 {
-  margin:15px 20px;
+  margin:15px 0px;
 }
 
 .checkout-price {
@@ -221,6 +224,14 @@ img {
 
 .checkout-price div{
   padding: 0px;
+}
+
+.radioBtn {
+  display: none;
+}
+
+.starLabel{ 
+  cursor: pointer;
 }
 
 footer {

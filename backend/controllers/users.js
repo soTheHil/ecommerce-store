@@ -5,6 +5,11 @@ import { generateToken } from "../utils/other.js";
 
 const usersRouter = express.Router()
 
+usersRouter.get("/:id", async (req, res) => {
+    const user = await User.findById(req.params.id)
+    res.json(user)
+})
+
 usersRouter.post("/signup", async (req, res) => {
     const { name, email, password } = req.body
     const existUser = await User.findOne({ email })

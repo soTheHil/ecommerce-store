@@ -2,3 +2,8 @@ GET http://localhost:3001/api/seed/users
 
 ###
 GET http://localhost:3001/api/seed/products
+###
+DELETE  http://localhost:3001/api/orders
+###
+DELETE  http://localhost:3001/api/seed/reviews
+

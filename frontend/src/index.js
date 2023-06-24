@@ -15,6 +15,7 @@ import { loader as itemsLoader } from './Components/ItemsView';
 //import ItemInfo from './Components/ItemInfo';
 import ItemInfo from './Components/ItemInfo';
 import { loader as itemInfoLoader } from './Components/ItemInfo';
+//import { loader as orderLoader } from './Components/OrderDetails';
 
 import { Provider } from 'react-redux';
 import store from './store';
@@ -23,6 +24,7 @@ import SigninScreen from './Components/SigninScreen';
 import SignupScreen from './Components/SignupScreen';
 import DeliveryScreen from './Components/DeliveryScreen';
 import OrdersScreen from './Components/OrdersScreen';
+import OrderDetails from './Components/OrderDetails';
 
 const router = createBrowserRouter([
   {
@@ -54,6 +56,10 @@ const router = createBrowserRouter([
       {
         element: <OrdersScreen />,
         path: "orders"
+      },
+      {
+        element: <OrderDetails />,
+        path: "orderDetails/:orderId"
       }
     ]
   }

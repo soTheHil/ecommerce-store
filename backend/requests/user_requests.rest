@@ -2,9 +2,11 @@ POST http://localhost:3001/api/users/signin
 Content-Type: application/json
 
 {
-    "email": "meep@gmail.com",
-    "password": "goose"
+    "email": "meep@g",
+    "password": "1"
 }
+###
+GET http://localhost:3001/api/users/6491b0a3b24f563e61a8bba7
 ###
 POST http://localhost:3001/api/users/signup
 Content-Type: application/json
@@ -15,4 +17,4 @@ Content-Type: application/json
     "password": "goose"
 }
 ###
-GET http://localhost:3001/api/orders/64935bace31f54ca8271460b
+GET http://localhost:3001/api/orders/64946c3a8f87142c48545212
